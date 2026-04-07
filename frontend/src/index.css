@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .glass {
+    @apply bg-white/50 dark:bg-slate-900/50 backdrop-blur-xl border border-white/20 dark:border-slate-800 shadow-2xl;
+  }
+}
+
+body {
+  @apply transition-colors duration-300;
+  background-color: #f8fafc;
+  background-image: 
+    radial-gradient(at 0% 0%, hsla(210,100%,85%,0.8) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, hsla(250,100%,85%,0.8) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, hsla(210,100%,85%,0.8) 0px, transparent 50%);
+  background-attachment: fixed;
+  color: #0f172a;
+}
+.dark body {
+  background-color: #020617;
+  background-image: 
+    radial-gradient(at 0% 0%, hsla(210,100%,20%,0.3) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, hsla(250,100%,20%,0.3) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, hsla(210,100%,20%,0.3) 0px, transparent 50%);
+  color: #f8fafc;
+}
